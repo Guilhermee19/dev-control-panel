@@ -17,25 +17,25 @@ export class HomeComponent {
       title: 'Memorial do Carmo',
       deadline: '2024-09-24',
       status: 'WAITING',
-      price: 1800
+      price: 100
     },
     {
       title: 'Memorial do Carmo',
       deadline: '2024-09-24',
       status: 'IN_PROGRESS',
-      price: 1800
+      price: 100
     },
     {
       title: 'Memorial do Carmo',
       deadline: '2024-09-24',
       status: 'CLOSED',
-      price: 1800
+      price: 100
     },
     {
       title: 'Memorial do Carmo',
       deadline: '2024-09-24',
       status: 'FINALISED',
-      price: 1800
+      price: 100
     }
   ]
 }

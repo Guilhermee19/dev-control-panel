@@ -12,6 +12,9 @@ module.exports = {
       height: {
         heightLessNav: 'h-[calc(100vh-64px)]',
       },
+        fontSize: {
+          calc: 'calc(8px + 0.3125vw)',
+        },
       screens: {
         desktop: '840px',
         smphoneMax: { max: '320px' },
