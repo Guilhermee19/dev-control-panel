@@ -1,31 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
-@import 'styles/animations';
-@import 'styles/buttons';
-@import 'styles/input';
-@import 'styles/media';
-@import 'styles/scroll';
-@import 'styles/theming';
-@import 'styles/typography';
+// @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// @import 'styles/media';
+// @import 'styles/scroll';
+// @import 'styles/typography';
 @import 'styles/variables';
 
 * {
-  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 html,
 body {
-  height: 100%;
+  @apply h-full;
 }
 
 body {
-  margin: 0;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
-  background-color: #fafafa;
-}
+  @apply m-0 font-roboto bg-primary-bg;
 
-.svg-inline--fa {
-  display: inline-block;
-  height: 1em;
-  overflow: visible;
-  vertical-align: -0.125em;
+  .page{
+    @apply w-full;
+  }
+
+  .task {
+    @apply bg-white hover:bg-[#eaefff] transition-colors px-4 py-4 rounded-lg shadow flex justify-between items-center;
+
+    p{
+      @apply text-xl text-label m-0;
+    }
+  }
 }

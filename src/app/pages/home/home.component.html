@@ -1,24 +1,65 @@
-<main>
-  <div class="container">
-    <section class="home">
-      <header>
-        <div class="info">
-          <p class="f-16"> 1 </p>
-          <h1 class="f-12"> Total de Projetos </h1>
+<main class="page bg-purple shadow-md">
+  <div class="w-[90%] max-w-screen-desktop mx-auto my-0">
+    <section class="w-full">
+      <header class="w-full flex justify-start items-center gap-4 pt-4 pb-8">
+        <div>
+          <p class="text-xl m-0 text-white font-semibold"> 1 </p>
+          <h1 class="text-base m-0 text-white font-normal"> Total de Projetos </h1>
         </div>
-        <div class="info">
-          <p class="f-16"> 1 </p>
-          <h1 class="f-12"> Em andamento </h1>
+        <div>
+          <p class="text-xl m-0 text-white font-semibold"> 1 </p>
+          <h1 class="text-base m-0 text-white font-normal"> Em andamento </h1>
         </div>
-        <div class="info">
-          <p class="f-16"> 1 </p>
-          <h1 class="f-12"> Encerrados </h1>
+        <div>
+          <p class="text-xl m-0 text-white font-semibold"> 1 </p>
+          <h1 class="text-base m-0 text-white font-normal"> Encerrados </h1>
         </div>
 
         <p-button
+          class="ml-auto"
           label="Novo Projeto"
-          icon="pi pi-check" />
+          icon="pi pi-plus" />
       </header>
+    </section>
+  </div>
+</main>
+
+<main class="page -mt-6">
+  <div class="w-[90%] max-w-screen-desktop mx-auto my-0">
+    <section class="w-full flex flex-col gap-4">
+      @for (task of tasks; track $index) {
+        <div class="task">
+          <p> {{ task.title }} </p>
+
+          <div>
+            <p class="text-lg text-label m-0"> Prazo </p>
+            <h2 class="text-2xl m-0 font-medium"> {{ task.deadline }} </h2>
+          </div>
+
+          <div>
+            <p class="text-lg text-label m-0"> Valor </p>
+            <h2 class="text-2xl m-0 font-medium"> R$ {{ task.price }} </h2>
+          </div>
+
+          @if(task.status === 'WAITING'){
+            <p-tag severity="info" value="Aguardando" />
+          }
+          @if(task.status === 'IN_PROGRESS'){
+            <p-tag severity="success" value="Em andamento" />
+          }
+          @if(task.status === 'CLOSED'){
+            <p-tag severity="danger" value="Atrasado" />
+          }
+          @if(task.status === 'FINALISED'){
+            <p-tag value="Finalizado" />
+          }
+
+          <div class="flex gap-2">
+            <p-button icon="pi pi-pencil" severity="info" />
+            <p-button icon="pi pi-trash" severity="danger"  />
+          </div>
+        </div>
+      }
     </section>
   </div>
 </main>

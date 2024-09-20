@@ -1,14 +1,15 @@
 :root {
-  font-size: calc(16px + 0.3125vw);
+  font-size: calc(8px + 0.3125vw);
   --ts: all 0.2s linear;
   --br: 0.5rem;
   --elastic: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --max-width: 896px;
 
-  --color-primary: #836fda;
+  // --color-primary: #836fda;
 
-  --label: #737373;
-  --white: #fff;
-  --input-bg: #fff;
+  // --label: #737373;
+  // --white: #fff;
+  // --input-bg: #fff;
 
   --shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 

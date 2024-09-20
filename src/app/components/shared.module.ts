@@ -1,17 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { IconDirective } from '../directives/icon.directive';
 import { ButtonModule } from 'primeng/button';
+import { PageLoadingComponent } from './shared/page-loading/page-loading.component';
 
 const IMPORTS = [
   FormsModule,
   ReactiveFormsModule,
-  ButtonModule
+  ButtonModule,
 ];
 
 const DECLARATIONS = [
-  IconDirective,
+  PageLoadingComponent
 ];
 
 @NgModule({
